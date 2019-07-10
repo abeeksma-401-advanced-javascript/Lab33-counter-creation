@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import CountContext from '../components/countContext';
+import {CountContext} from '../components/countContext';
 
 function Count () {
   const context = useContext(CountContext);

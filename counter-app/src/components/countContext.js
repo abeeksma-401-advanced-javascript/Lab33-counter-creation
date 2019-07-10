@@ -8,29 +8,27 @@ class CountProvider extends React.Component {
 
     this.state = {
       count : 0, 
-      increcment : this.increcment,
+      increment : this.increment,
       decrement : this.decrement,
 
     }
   }
 
-  increment = something => {
-
+  increment = () => {
+    this.setState(state => ({count : state.count + 1}))
   }
 
-  decrement = something => {
-
+  decrement = () => {
+    this.setState(state => ({count : state.count - 1}))
   }
 
   render(){
     return (
-      <>
-      <CountContext.Provider value = {this.state}>
+      <CountContext.Provider value={this.state}>
         {this.props.children}
       </CountContext.Provider>
-      </>
     );
   }
 }
 
-export default CountProvider; 
+export default CountProvider;   

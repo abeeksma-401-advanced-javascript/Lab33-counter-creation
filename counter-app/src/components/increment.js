@@ -1,13 +1,15 @@
 import React, { useContext } from 'react';
-import CountContext from './countContext';
+import {CountContext} from './countContext';
 
 function Increment () {
-  
-  const handleClick = e => {
+  const context = useContext(CountContext);
 
+  const handleClick = e => {
+    context.increment()
   }
 
   return (
+
     <button onClick={handleClick}>+</button>
   )
 };

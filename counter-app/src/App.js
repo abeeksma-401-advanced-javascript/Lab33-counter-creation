@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {CountProvider} from './components/countContext';
+import CountProvider from './components/countContext';
 
 import Count from './components/count';
 import Increment from './components/increment';
