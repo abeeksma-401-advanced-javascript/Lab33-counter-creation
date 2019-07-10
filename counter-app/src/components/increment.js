@@ -1,6 +1,13 @@
 import React, { useContext } from 'react';
 import {CountContext} from './countContext';
 
+const buttonColor = {
+  backgroundColor: '#414141',
+  padding: '25px',
+  fontSize: '30px',
+  color: '#bb86fc'
+};
+
 function Increment () {
   const context = useContext(CountContext);
 
@@ -10,7 +17,7 @@ function Increment () {
 
   return (
 
-    <button onClick={handleClick}>+</button>
+    <button style={buttonColor} onClick={handleClick}>+</button>
   )
 };
 
